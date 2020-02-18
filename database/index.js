@@ -6,11 +6,10 @@ const config = require(path.join(__dirname, 'config.js'));
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : config.mySQLpassword,
-  database: 'image_render'
+  password : 'pasword',
+  database : 'image_render'
 });
 
-// var mysql = require('mysql');
 
 // var connection = mysql.createConnection({
 //   host     : process.env.RDS_HOSTNAME,
@@ -28,3 +27,4 @@ module.exports.get = (callback) => {
         callback(null, images);
     })
 }
+

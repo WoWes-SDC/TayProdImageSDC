@@ -20,15 +20,17 @@ export default class App extends React.Component {
   }
   
   componentDidMount() {
-    axios.get('/images')
-    .then( (data) => {
-      console.log(data)
-      this.setState({
-        products : data.data,
-        currentProduct: data.data[200]
-      })
-    })
+    // axios.get('/images')
+    // .then( (data) => {
+    //   console.log(data)
+    //   this.setState({
+    //     products : data.data,
+    //     currentProduct: data.data[200]
+    //   })
+    // })
+    // .catch(err => {console.error('axios get in app.js')})
   }
+  
   handleShowComponent(){
     this.setState({
       HiddenComponentClass: 'show-hidden'
